@@ -1,0 +1,103 @@
+@media screen and (max-width: 975px) {
+   body > #card {
+      width: 95%;
+   }
+}
+
+@media screen and (max-width: 850px) {
+   body > #card {
+      grid-template-columns: .75fr 1fr;
+
+      #input-screen > .tip > div {
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+}
+
+@media screen and (max-width: 750px) {
+   body > #card {
+      width: 100%;
+   }
+}
+
+@media screen and (max-width: 700px) {
+   body > #card {
+      padding: 30px;
+   }
+}
+
+@media screen and (max-width: 650px) {
+
+   body > h1 {
+      margin-top: 0px;
+      margin-bottom: 25px;
+   }
+
+   body > #card {
+      padding: 40px;
+      grid-template-columns: 1fr;
+      width: 95%;
+      gap: 0;
+
+      #input-screen {
+         padding-bottom: 30px;
+         border-bottom: 2px dashed $grayishCyan-d;
+      }
+
+      #display-screen {
+         position: static;
+         margin-top: 30px;
+         
+         #reset {
+            position: static;
+            bottom: 0;
+            width: 100%;
+            margin-top: 35px;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 450px) {
+   body {
+      padding: 0;
+
+      & h1 {
+         margin-top: 20px;
+      }
+
+      #card {
+         width: 100%;
+         border-radius: 20px 20px 0 0;
+      }
+   }
+
+   
+   body > #card > #display-screen > .tip-display > p {
+      font-size: 30px;
+   }
+}
+
+@media screen and (max-width: 400px) {
+   body > #card {
+      padding: 20px;
+   }
+}
+
+@media screen and (max-width: 350px) {
+   body > #card {
+      #display-screen > .tip-display {
+         display: block;
+      }
+   }
+}
+
+@media screen and (max-width: 250px) {
+   body > #card > #input-screen > .tip > div {
+         grid-template-columns: 1fr;
+   }
+
+   body > #card > #display-screen > .tip-display > p {
+      font-size: 18px;
+   }
+}

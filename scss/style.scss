@@ -2,12 +2,179 @@
 
 @import 'reset';
 @import 'config';
-@import 'mobile';
-
-input {font-size: 24px;}
 
 body {
    padding: 20px;
    background-color: $grayishCyan-l;
    font-family: $spaceMono;
+
+   & > h1, #card {
+      margin: 0 auto;
+   }
+
+   & > h1 {
+      margin-top: 3.5vh;
+      margin-bottom: 40px;
+      text-align: center;
+      line-height: 35px;
+      color: $darkCyan;
+   }
+
+   #card {
+      background-color: $white;
+      border-radius: 10px;
+      padding: 40px;
+      width: 900px;
+
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4.5%;
+
+      #input-screen {
+
+         .bill, .people {
+            display: grid;
+            grid-template-columns: 1fr;
+
+            label {
+               color: $grayishCyan-d;
+               margin-bottom: 5px;
+               font-weight: bold;
+            }
+            
+            input {
+               background-color: $grayishCyan-ll;
+               border-radius: 5px;
+               font-size: 20px;
+               width: 100%;
+               outline: 0;
+               border: 0;
+               padding: 5px;
+               text-align: end;
+               border: 2px solid transparent;
+               color: $darkCyan;
+               font-weight: bold;
+
+               // &:active {
+               //    border: 2px solid $strongCyan;
+               // }
+            }
+         }
+
+         .bill, .tip {
+            margin-bottom: 30px;
+         }
+
+         .tip {
+            p {
+               color: $grayishCyan-d;
+               margin-bottom: 5px;
+               font-weight: bold;
+            }
+
+            & > div {
+               display: grid;
+               grid-template-columns: repeat(3, 1fr);
+               gap: 10px;
+
+               button {
+                  background-color: $darkCyan;
+                  color: $grayishCyan-ll;
+                  font-family: inherit;
+                  padding: 10px 20px;
+                  font-weight: 700;
+                  border: 0;
+                  font-size: 18.5px;
+                  border-radius: 5px;
+                  transition: .2s ease-in-out;
+                  border: 2px solid transparent;
+
+                  &:hover {
+                     background-color: $strongCyan;
+                     color: $darkCyan;
+                  }
+
+                  &:active {
+                     transform: scale(.9);
+                  }
+               }
+
+               button:last-child {
+                  background-color: $grayishCyan-ll;
+                  color: $grayishCyan-d;
+                  font-size: 20px;
+
+                  &:hover {
+                     border: 2px solid $grayishCyan-d;
+                  }
+               }
+            }
+         }
+      }
+
+      #display-screen {
+         background-color: $darkCyan;
+         border-radius: 10px;
+         padding: 7.5%;
+         position: relative;
+         
+         .tip-display {
+            color: $white;
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+
+            &:first-child {
+               margin-bottom: 20px;
+            }
+
+            ul > li:last-child {
+               font-size: 12px;
+               color: $grayishCyan;
+            }
+
+            p {
+               font-family: $spaceMono;
+               color: $strongCyan;
+               font-size: 40px;
+
+               span {
+                  text-decoration: dashed;
+               }
+            }
+         }
+
+         #reset {
+            width: 85%;
+            color: $darkCyan;
+            position: absolute;
+            // background-color: darken($strongCyan, 10%);
+            background-color: $strongCyan;
+            text-transform: uppercase;
+            border-radius: 5px;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 18px;
+            bottom: 25px;
+            border: 0;
+            transition: .2s ease-in-out;               
+            border: 2px solid transparent;
+
+            
+            &:hover {
+               background-color: $darkCyan;
+               color: $strongCyan;
+               border: 2px solid $strongCyan;
+            }
+
+            &:active {
+               transform: scale(.9);
+            }
+         }
+      }
+   }
 }
+
+
+
+@import 'mobile';
