@@ -1,5 +1,6 @@
 'use strict';
 
+// target elements from the DOM
 let billDiv = document.querySelector('.bill'),
 billInput = document.querySelector('#bill-input'),
 peopleDiv = document.querySelector('.people'),
@@ -60,11 +61,12 @@ customButton.addEventListener('click', () => {
    peopleInput.style.border = ''
 })
 
-
+// listen for clicks on tip % buttons
 document.addEventListener('click', (e) => {
    if (e.target.classList.contains('percent')){
       console.log(e.target.children[0].textContent)
       
+      // calculate tip, bill and amounts per person
       function calculateTip () {
          
          let bill = billInput.value;
@@ -76,6 +78,8 @@ document.addEventListener('click', (e) => {
          let personBill = Math.floor(personTip + (bill / people));
          let billAmount = Math.floor((bill - totalTip) + (totalTip * 2));
 
+
+         // display calculated value on the calculator screen
          if (bill.length >= 1
              && people.length >= 1 
              && bill != 0 
@@ -96,7 +100,7 @@ document.addEventListener('click', (e) => {
             peopleInput.style.border = '2px solid red'
          }
    
-   
+         // display error if inputs empty
          if (bill == 0) {
             billDiv.children[0].appendChild(error1)
          }
@@ -104,6 +108,7 @@ document.addEventListener('click', (e) => {
             peopleDiv.children[0].appendChild(error2)
          }
 
+         // timer to hide error after 5secs
          setTimeout(hideError, 2500)
 
          function hideError() {
@@ -185,6 +190,7 @@ reset.addEventListener('click', () => {
    customInput.style.display = 'none';
    customButton.style.display = '';
 
+   // set calculator display back to default
    tipPerPerson.children[0].innerHTML = '0.00';
    totalPerPerson.children[0].innerHTML = '0.00';
    totalBill.children[0].innerHTML = '0.00';
