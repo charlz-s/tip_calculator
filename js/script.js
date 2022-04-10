@@ -95,10 +95,50 @@ document.addEventListener('click', (e) => {
 
       calculateTip();
    }
-   
-   
-
 });
+
+// custom tipping
+document.body.addEventListener('keyup', (e) => {
+   
+   if (e.target.id == 'customInput') {
+      function calculateTip () {
+         
+         let bill = billInput.value;
+         let tip = e.target.value;
+         let people = peopleInput.value;
+
+         let totalTip = bill * (tip / 100);
+         let personTip = Math.floor((bill * (tip / 100)) / people);
+         let personBill = Math.floor(personTip + (bill / people));
+         let billAmount = Math.floor((bill - totalTip) + (totalTip * 2));
+
+         if (bill.length >= 1
+             && people.length >= 1 
+             && bill != 0 
+             && people != 0
+            ) {
+            tipPerPerson.children[0].textContent = personTip
+            totalPerPerson.children[0].textContent = personBill
+            totalBill.children[0].textContent = billAmount
+         } 
+         else if (bill.length < 1) {
+            billInput.style.border = '2px solid red'
+         }
+         else if (people.length < 1) {
+            peopleInput.style.border = '2px solid red'
+         }
+         
+         // if (bill == 0) {
+         //    error.textContent = `value cannot be x`
+         //    billDiv.children[0].appendChild(error)
+         // }
+
+      }
+
+      calculateTip();
+   } 
+   
+})
 
 
 // reset calculator 
