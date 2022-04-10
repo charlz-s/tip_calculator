@@ -13,8 +13,8 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 ![](images/desktop.jpg)
 ![](images/mobile.jpg)
 
-<!-- ### Links
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com) -->
+### Links
+- Live Site URL: [Add live site URL here](https://charlz-s.github.io/tip_calculator)
 
 ### Built with
 - Semantic HTML5 markup
