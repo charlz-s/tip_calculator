@@ -20,6 +20,10 @@ body {
       color: $darkCyan;
    }
 
+   button {
+      cursor: pointer;
+   }
+
    #card {
       background-color: $white;
       border-radius: 10px;
@@ -28,7 +32,7 @@ body {
 
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 4.5%;
+      gap: 4.5%; grid-gap: 4.5%;
 
       #input-screen {
 
@@ -75,7 +79,7 @@ body {
             & > div {
                display: grid;
                grid-template-columns: repeat(3, 1fr);
-               gap: 10px;
+               gap: 10px; grid-gap: 10px;
 
                button {
                   background-color: $darkCyan;
@@ -99,13 +103,17 @@ body {
                   }
                }
 
-               button:last-child {
+               .custom {
                   background-color: $grayishCyan-ll;
                   color: $grayishCyan-d;
-                  font-size: 20px;
 
                   &:hover {
-                     border: 2px solid $grayishCyan-d;
+                     background-color: transparent;
+                     border: 2px solid $darkCyan;
+                  }
+
+                  &:active {
+                     transform: scale(.8);
                   }
                }
             }
@@ -124,9 +132,9 @@ body {
             justify-content: space-between;
             font-weight: bold;
 
-            &:first-child {
+            // &:first-child {
                margin-bottom: 20px;
-            }
+            // }
 
             ul > li:last-child {
                font-size: 12px;
@@ -139,23 +147,21 @@ body {
                font-size: 40px;
 
                span {
+                  margin: 0;
                   text-decoration: dashed;
                }
             }
          }
 
          #reset {
-            width: 85%;
+            width: 100%;
             color: $darkCyan;
-            position: absolute;
-            // background-color: darken($strongCyan, 10%);
             background-color: $strongCyan;
             text-transform: uppercase;
             border-radius: 5px;
             padding: 5px 10px;
             font-weight: bold;
             font-size: 18px;
-            bottom: 25px;
             border: 0;
             transition: .2s ease-in-out;               
             border: 2px solid transparent;
@@ -176,5 +182,5 @@ body {
 }
 
 
-
+@import 'fromjs';
 @import 'mobile';

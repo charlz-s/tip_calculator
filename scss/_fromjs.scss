@@ -1,0 +1,14 @@
+// custom styles for html elements added from the javascript file
+
+#customInput {
+   width: 100%;
+   outline: 0;
+   border: 2px solid $darkCyan;
+   border-radius: 5px;
+   font-weight: bold;
+   padding: 5px 10px;
+   font-size: 20px;
+   text-align: end;
+   cursor: pointer;
+   color: $darkCyan;
+}

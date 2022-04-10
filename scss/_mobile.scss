@@ -37,7 +37,7 @@
       padding: 40px;
       grid-template-columns: 1fr;
       width: 95%;
-      gap: 0;
+      gap: 0; grid-gap: 0;
 
       #input-screen {
          padding-bottom: 30px;

@@ -20,13 +20,13 @@
       <!-- tip buttons -->
       <div class="tip">
         <p>Select Tip %</p>
-        <div>
-          <button>5%</button>
-          <button>10%</button>
-          <button>15%</button>
-          <button>20%</button>
-          <button>25%</button>
-          <button>Custom</button>
+        <div class="buttons-div">
+          <button class="percent"><span>5</span>%</button>
+          <button class="percent"><span>10</span>%</button>
+          <button class="percent"><span>15</span>%</button>
+          <button class="percent"><span>20</span>%</button>
+          <button class="percent"><span>25</span>%</button>
+          <button class="custom">Custom</button>
         </div>
       </div>
 
@@ -43,7 +43,7 @@
           <li>/ person</li>
         </ul>
 
-        <p>₦0.00</p>
+        <p id="tip-per-person">₦<span>0.00</span></p>
       </div>
 
       <div id="total-tip" class="tip-display">
@@ -52,16 +52,22 @@
           <li>/ person</li>
         </ul>
         
-        <p>₦0.00</p>
+        <p id="total-per-person">₦<span>0.00</span></p>
+      </div>
+
+      <div class="tip-display">
+        <ul>
+          <li>Bill</li>
+          <li>/ total</li>
+        </ul>
+        
+        <p id="total-bill">₦<span>0.00</span></p>
       </div>
 
       <button id="reset">reset</button>
     </div>
   </section>
 
-  <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Charlz</a>.
-  </div> -->
+  <script src="js/script.js"></script>
 </body>
 </html>
