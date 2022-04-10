@@ -20,10 +20,16 @@ customInput.style.display = 'none'
 buttonsDiv.appendChild(customInput)
 
 // create error message
-let error = document.createElement('span')
+let error1 = document.createElement('span')
+error1.className = 'display-error'
+error1.textContent = `INVALID VALUE`
+
+let error2 = document.createElement('span')
+error2.className = 'display-error'
+error2.textContent = `INVALID VALUE`
 
 // focus on the bill input
-billInput.addEventListener('mouseover', () => {
+billInput.addEventListener('click', () => {
    billInput.focus();
    billInput.style.border = '2px solid hsl(172, 67%, 45%)'
    peopleInput.style.border = ''
@@ -33,7 +39,7 @@ billInput.addEventListener('mouseover', () => {
    customButton.style.display = '';
 })
 // focus on the number of people input
-peopleInput.addEventListener('mouseover', () => {
+peopleInput.addEventListener('click', () => {
    peopleInput.focus();
    peopleInput.style.border = '2px solid hsl(172, 67%, 45%)'
    billInput.style.border = ''
@@ -78,26 +84,41 @@ document.addEventListener('click', (e) => {
             tipPerPerson.children[0].textContent = personTip
             totalPerPerson.children[0].textContent = personBill
             totalBill.children[0].textContent = billAmount
-         } 
+         }
+         else if (bill.length < 1 && people.length < 1) {
+            billInput.style.border = '2px solid red'
+            peopleInput.style.border = '2px solid red'
+         }
          else if (bill.length < 1) {
             billInput.style.border = '2px solid red'
          }
          else if (people.length < 1) {
             peopleInput.style.border = '2px solid red'
          }
-         
-         // if (bill == 0) {
-         //    error.textContent = `value cannot be x`
-         //    billDiv.children[0].appendChild(error)
-         // }
+   
+   
+         if (bill == 0) {
+            billDiv.children[0].appendChild(error1)
+         }
+         if (people == 0) {
+            peopleDiv.children[0].appendChild(error2)
+         }
 
+         setTimeout(hideError, 2500)
+
+         function hideError() {
+            error1.remove()
+            error2.remove()
+            billInput.style.border = ''
+            peopleInput.style.border = ''
+         }
       }
 
       calculateTip();
    }
 });
 
-// custom tipping
+// custom % tipping
 document.body.addEventListener('keyup', (e) => {
    
    if (e.target.id == 'customInput') {
@@ -121,18 +142,33 @@ document.body.addEventListener('keyup', (e) => {
             totalPerPerson.children[0].textContent = personBill
             totalBill.children[0].textContent = billAmount
          } 
+         else if (bill.length < 1 && people.length < 1) {
+            billInput.style.border = '2px solid red'
+            peopleInput.style.border = '2px solid red'
+         }
          else if (bill.length < 1) {
             billInput.style.border = '2px solid red'
          }
          else if (people.length < 1) {
             peopleInput.style.border = '2px solid red'
          }
-         
-         // if (bill == 0) {
-         //    error.textContent = `value cannot be x`
-         //    billDiv.children[0].appendChild(error)
-         // }
 
+         
+         if (bill == 0) {
+            billDiv.children[0].appendChild(error1)
+         }
+         if (people == 0) {
+            peopleDiv.children[0].appendChild(error2)
+         }
+
+         setTimeout(hideError, 2500)
+
+         function hideError() {
+            error1.remove()
+            error2.remove()
+            billInput.style.border = ''
+            peopleInput.style.border = ''
+         }
       }
 
       calculateTip();
