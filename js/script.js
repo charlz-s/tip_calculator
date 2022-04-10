@@ -109,7 +109,7 @@ document.addEventListener('click', (e) => {
          }
 
          // timer to hide error after 5secs
-         setTimeout(hideError, 2500)
+         setTimeout(hideError, 3000)
 
          function hideError() {
             error1.remove()
@@ -166,7 +166,7 @@ document.body.addEventListener('keyup', (e) => {
             peopleDiv.children[0].appendChild(error2)
          }
 
-         setTimeout(hideError, 2500)
+         setTimeout(hideError, 3000)
 
          function hideError() {
             error1.remove()
@@ -189,9 +189,16 @@ reset.addEventListener('click', () => {
    peopleInput.value = '';
    customInput.style.display = 'none';
    customButton.style.display = '';
+   billInput.style.border = ''
+   peopleInput.style.border = ''
 
    // set calculator display back to default
    tipPerPerson.children[0].innerHTML = '0.00';
    totalPerPerson.children[0].innerHTML = '0.00';
    totalBill.children[0].innerHTML = '0.00';
+
+   // remove error
+   error1.remove()
+   error2.remove()
+
 })

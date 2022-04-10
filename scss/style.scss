@@ -8,11 +8,11 @@ body {
    background-color: $grayishCyan-l;
    font-family: $spaceMono;
 
-   & > h1, #card {
+   & > img, #card {
       margin: 0 auto;
    }
 
-   & > h1 {
+   & > img {
       margin-top: 3.5vh;
       margin-bottom: 40px;
       text-align: center;
@@ -67,6 +67,38 @@ body {
 
          .bill, .tip {
             margin-bottom: 30px;
+         }
+
+         .bill {
+            position: relative;
+
+            input {
+               padding-left: 23.5px;
+            }
+
+            span {
+               position: absolute;
+               color: $grayishCyan;
+               bottom: 7.5px;
+               left: 10px;
+               font-size: 20px;
+            }
+         }
+
+         .people {
+            position: relative;
+
+            input {
+               padding-left: 23.5px;
+            }
+
+            img {
+               position: absolute;
+               color: $grayishCyan;
+               bottom: 14.5px;
+               left: 10px;
+               font-size: 20px;
+            }
          }
 
          .tip {
@@ -131,10 +163,9 @@ body {
             display: flex;
             justify-content: space-between;
             font-weight: bold;
+            margin-bottom: 20px;
+            align-items: flex-end;
 
-            // &:first-child {
-               margin-bottom: 20px;
-            // }
 
             ul > li:last-child {
                font-size: 12px;
