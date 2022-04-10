@@ -6,7 +6,7 @@ This is a solution to the [Tip calculator app challenge on Frontend Mentor](http
 ## Table of contents
 
 - [Screenshot](#screenshot)
-<!-- - [Links](#links) -->
+- [Links](#links)
 - [Built with](#built-with)
 
 ### Screenshot
