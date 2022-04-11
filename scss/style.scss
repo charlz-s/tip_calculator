@@ -169,8 +169,8 @@ body {
             display: flex;
             justify-content: space-between;
             font-weight: bold;
-            margin-bottom: 20px;
-            align-items: flex-end;
+            margin-bottom: 10px;
+            align-items: center;
 
             ul {
                margin-right: 10px;
@@ -235,6 +235,14 @@ label {
    align-items: flex-end;
 }
 
+#loading {
+   text-align: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   height: 100%;
+}
 
 /* custom scrollbar */
 ::-webkit-scrollbar {
@@ -246,14 +254,14 @@ label {
 }
 
 ::-webkit-scrollbar-thumb {
-   background-color: $strongCyan;
+   background-color: $grayishCyan-l;
    border-radius: 20px;
    border: 7px solid transparent;
    background-clip: content-box;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-   background-color: $grayishCyan-l;
+   background-color: $grayishCyan;
 }
 
 @import 'fromjs';
