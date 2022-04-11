@@ -1,4 +1,3 @@
-// default styles for html pages
 
 /* Box sizing rules */
 *,
@@ -83,7 +82,7 @@ select {
   }
 }
 
-// Hide increment and decrement buttons on text input
+/* Hide increment and decrement buttons on text input */
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;

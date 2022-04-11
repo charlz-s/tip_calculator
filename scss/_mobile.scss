@@ -1,45 +1,58 @@
 // style edit, to be displayed on smaller screens
 
 @media screen and (max-width: 975px) {
-   body > #card {
+   body>#card {
       width: 95%;
    }
 }
 
 @media screen and (max-width: 850px) {
-   body > #card {
+   body>#card {
       grid-template-columns: .75fr 1fr;
 
-      #input-screen > .tip > div {
+      #input-screen>.tip>div {
          grid-template-columns: 1fr 1fr;
       }
    }
 }
 
+@media screen and (max-width: 850px) and (min-width: 651px) {
+   body>#card>#display-screen {
+      position: relative;
+
+      #reset {
+         position: absolute;
+         bottom: 30px;
+         width: 85%;
+      }
+   }
+}
+
 @media screen and (max-width: 750px) {
-   body > #card {
+   body>#card {
       width: 100%;
    }
 }
 
 @media screen and (max-width: 700px) {
-   body > #card {
+   body>#card {
       padding: 30px;
    }
 }
 
 @media screen and (max-width: 650px) {
 
-   body > img {
+   body>img {
       margin-top: 0px;
       margin-bottom: 25px;
    }
 
-   body > #card {
+   body>#card {
       padding: 40px;
       grid-template-columns: 1fr;
       width: 95%;
-      gap: 0; grid-gap: 0;
+      gap: 0;
+      grid-gap: 0;
 
       #input-screen {
          padding-bottom: 30px;
@@ -49,7 +62,7 @@
       #display-screen {
          position: static;
          margin-top: 30px;
-         
+
          #reset {
             position: static;
             bottom: 0;
@@ -64,7 +77,7 @@
    body {
       padding: 0;
 
-      & > img {
+      &>img {
          margin-top: 20px;
       }
 
@@ -74,32 +87,32 @@
       }
    }
 
-   
-   body > #card > #display-screen > .tip-display > p {
+
+   body>#card>#display-screen>.tip-display>p {
       font-size: 30px;
    }
 }
 
 @media screen and (max-width: 400px) {
-   body > #card {
+   body>#card {
       padding: 20px;
    }
 }
 
 @media screen and (max-width: 350px) {
-   body > #card {
-      #display-screen > .tip-display {
+   body>#card {
+      #display-screen>.tip-display {
          display: block;
       }
    }
 }
 
 @media screen and (max-width: 250px) {
-   body > #card > #input-screen > .tip > div {
-         grid-template-columns: 1fr;
+   body>#card>#input-screen>.tip>div {
+      grid-template-columns: 1fr;
    }
 
-   body > #card > #display-screen > .tip-display > p {
+   body>#card>#display-screen>.tip-display>p {
       font-size: 18px;
    }
 }

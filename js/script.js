@@ -14,11 +14,22 @@ let totalPerPerson = document.querySelector('#total-per-person')
 let totalBill = document.querySelector('#total-bill')
 
 // create custom % input for tips
+let customDiv = document.createElement('div');
+customDiv.setAttribute('id', 'customDiv')
+customDiv.style.display = 'none'
+
 let customInput = document.createElement('input');
 customInput.setAttribute('type', 'number')
 customInput.setAttribute('id', 'customInput')
 customInput.style.display = 'none'
-buttonsDiv.appendChild(customInput)
+
+let customSpan = document.createElement('span');
+customSpan.innerHTML = '%'
+
+customDiv.appendChild(customInput)
+customDiv.appendChild(customSpan)
+
+buttonsDiv.appendChild(customDiv)
 
 // create error message
 let error1 = document.createElement('span')
@@ -37,6 +48,7 @@ billInput.addEventListener('click', () => {
    customInput.style.border = ''
 
    customInput.style.display = 'none';
+   customDiv.style.display = 'none';
    customButton.style.display = '';
 })
 // focus on the number of people input
@@ -47,12 +59,14 @@ peopleInput.addEventListener('click', () => {
    customInput.style.border = ''
    
    customInput.style.display = 'none';
+   customDiv.style.display = 'none';
    customButton.style.display = '';
 })
 
 // hide the custom button and display the custom input
 customButton.addEventListener('click', () => {
    customButton.style.transition = '.2s ease-in-out';
+   customDiv.style.display = '';
    customInput.style.display = '';
    customButton.style.display = 'none';
    customInput.focus();
@@ -64,7 +78,6 @@ customButton.addEventListener('click', () => {
 // listen for clicks on tip % buttons
 document.addEventListener('click', (e) => {
    if (e.target.classList.contains('percent')){
-      console.log(e.target.children[0].textContent)
       
       // calculate tip, bill and amounts per person
       function calculateTip () {
@@ -188,6 +201,7 @@ reset.addEventListener('click', () => {
    customInput.value = '';
    peopleInput.value = '';
    customInput.style.display = 'none';
+   customDiv.style.display = 'none';
    customButton.style.display = '';
    billInput.style.border = ''
    peopleInput.style.border = ''
