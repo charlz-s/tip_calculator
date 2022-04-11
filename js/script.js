@@ -113,7 +113,8 @@ document.addEventListener('click', (e) => {
             billDisplayDiv.style.display = 'none';
             reset.style.display = 'none';
    
-            setTimeout(removeLoader, (Math.random() * 2000));
+            // set timer to hide loader randomly between 1sec and 4secs
+            setTimeout(removeLoader, (Math.random() * 3000));
             
             // hide loader and display other elements
             function removeLoader (){
@@ -228,6 +229,7 @@ document.body.addEventListener('keyup', (e) => {
                peopleDiv.children[0].appendChild(error2)
             }
    
+            // set timer to hide error after 3secs
             setTimeout(hideError, 3000)
    
             function hideError() {
@@ -266,3 +268,28 @@ reset.addEventListener('click', () => {
    error2.remove()
 
 })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

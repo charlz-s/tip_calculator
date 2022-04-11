@@ -183,16 +183,10 @@ body {
 
             p {
                font-family: $spaceMono;
-               overflow-x: scroll;
+               overflow-x: auto;
+               overflow-x: -moz-scrollbars-auto;
                color: $strongCyan;
                font-size: 40px;
-
-               // -ms-overflow-style: none;
-               // scrollbar-width: none;
-
-               // &::-webkit-scrollbar {
-               //    display: none;
-               // }
 
                span {
                   margin: 0;
@@ -202,6 +196,7 @@ body {
          }
 
          #reset {
+            margin-top: 30px;
             width: 100%;
             color: $darkCyan;
             background-color: $strongCyan;
